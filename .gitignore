@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# Docker
+*.pid
+*.seed
+*.bak
+*.swp
+.dockerignore
+docker-compose.override.yml
+
+# IDE/editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node.js (if frontend assets are added later)
+node_modules/
+npm-debug.log
+yarn-error.log
