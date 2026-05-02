@@ -2,15 +2,15 @@
 <html>
 <head>
   <title>Realtime Chat</title>
+  <link rel="stylesheet" href="/static/style.css">
   <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
   <script src="/static/chat.js"></script>
 </head>
 <body>
-  <h1>Realtime Chat App</h1>
-  <input id="room" placeholder="Room name">
-  <button onclick="joinRoom()">Join Room</button>
+  <h1>Realtime Chat with Persistence</h1>
+  <div id="chatbox"></div>
   <input id="msg" placeholder="Message">
   <button onclick="sendMessage()">Send</button>
-  <div id="chatbox"></div>
 </body>
 </html>
+
