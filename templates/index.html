@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Realtime Chat</title>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="/static/chat.js"></script>
+</head>
+<body>
+  <h1>Realtime Chat App</h1>
+  <input id="room" placeholder="Room name">
+  <button onclick="joinRoom()">Join Room</button>
+  <input id="msg" placeholder="Message">
+  <button onclick="sendMessage()">Send</button>
+  <div id="chatbox"></div>
+</body>
+</html>
