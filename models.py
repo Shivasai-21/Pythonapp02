@@ -6,5 +6,5 @@ db = client.chatdb
 def save_message(room, user, msg):
     db.messages.insert_one({"room": room, "user": user, "msg": msg})
 
-def get_messages(room):
-    return list(db.messages.find({"room": room}))
+def get_messages(room, limit=50):
+    return list(db.messages.find({"room": room}).sort("_id", -1).limit(limit))
