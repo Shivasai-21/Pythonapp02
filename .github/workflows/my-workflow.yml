@@ -1,1 +1,26 @@
+name: My Workflow
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  build:   
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: docker build
+        run: "docker build -t shivasai21/my-python-app:$GITHUB_SHA ."
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: image push to dockerhub
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: shivasai21/my-python-app:$GITHUB_SHA
